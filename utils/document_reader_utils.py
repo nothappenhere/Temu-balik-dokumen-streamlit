@@ -1,13 +1,19 @@
+import csv
 import streamlit as st
 from docx import Document
 from PyPDF2 import PdfReader
-import csv
 
 
 # Fungsi untuk membaca file kamus kata dasar (dictionary.txt)
 def load_dict(file_name):
     """
     Membaca file kamus dan mengembalikan set kata dasar.
+
+    Parameters:
+        file_name (str): Path ke file kamus (dictionary.txt).
+
+    Returns:
+        set: Kumpulan kata dasar dari file kamus.
     """
     dictionary = set()
     try:
@@ -29,6 +35,12 @@ def load_dict(file_name):
 def load_stopwords(file_name):
     """
     Membaca file stopwords dari CSV dan mengembalikan set stopwords.
+
+    Parameters:
+        file_name (str): Path ke file CSV stopwords.
+
+    Returns:
+        set: Kumpulan stopwords.
     """
     stopwords = set()
     try:
@@ -50,6 +62,12 @@ def load_stopwords(file_name):
 def read_txt(file_name):
     """
     Membaca teks dari file txt dan mengembalikan string.
+
+    Parameters:
+        file_name (str): Path ke file txt.
+
+    Returns:
+        str: Konten teks dari file.
     """
     try:
         with open(file_name, "r", encoding="utf-8") as file:
@@ -68,6 +86,12 @@ def read_txt(file_name):
 def read_docx(file_name):
     """
     Membaca teks dari file docx dan mengembalikan string.
+
+    Parameters:
+        file_name (str): Path ke file docx.
+
+    Returns:
+        str: Konten teks dari file.
     """
     try:
         docx = Document(file_name)
@@ -90,7 +114,12 @@ def read_docx(file_name):
 def read_pdf(file_name):
     """
     Membaca teks dari file PDF dan mengembalikannya sebagai string.
-    Menangani kesalahan jika file PDF tidak memiliki halaman atau tidak dapat diekstrak.
+
+    Parameters:
+        file_name (str): Path ke file PDF.
+
+    Returns:
+        str: Konten teks dari file PDF.
     """
     try:
         with open(file_name, "rb") as file:
@@ -116,6 +145,12 @@ def read_pdf(file_name):
 def read_file(file_name):
     """
     Membaca file berdasarkan ekstensinya (.txt, .docx, .pdf).
+
+    Parameters:
+        file_name (str): Path ke file input.
+
+    Returns:
+        str: Konten teks dari file.
     """
     if file_name.endswith(".txt"):
         return read_txt(file_name)

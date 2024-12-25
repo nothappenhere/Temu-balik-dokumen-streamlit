@@ -1,0 +1,7 @@
+streamlit
+nltk
+Sastrawi
+PyPDF2
+python-docx
+
+# pip install -r requirements.txt
