@@ -94,7 +94,7 @@ def validate_inputs(directory, dictionary_path, stopwords_path, query):
         directory (str): Path ke direktori yang berisi dokumen.
         dictionary_path (str): Path ke file kamus.
         stopwords_path (str): Path ke file stopwords.
-        query (str): Query yang dimasukkan oleh pengguna.
+        query (str): Query yang diberikan oleh pengguna.
 
     Returns:
         bool: True jika semua input valid, False jika ada yang tidak valid.

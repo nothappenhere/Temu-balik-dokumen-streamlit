@@ -7,7 +7,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="auto",
     menu_items={
-        "About": "## **Get this on [Github](https://github.com/nothappenhere/)!**",
+        "About": "## **Get this on [Github](https://github.com/nothappenhere/temu-balik-dokumen-streamlit)!**",
     },
 )
 

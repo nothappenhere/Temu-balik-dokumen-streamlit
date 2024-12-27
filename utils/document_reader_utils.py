@@ -4,13 +4,12 @@ from docx import Document
 from PyPDF2 import PdfReader
 
 
-# Fungsi untuk membaca file kamus kata dasar (dictionary.txt)
 def load_dict(file_name):
     """
     Membaca file kamus dan mengembalikan set kata dasar.
 
     Parameters:
-        file_name (str): Path ke file kamus (dictionary.txt).
+        file_name (str): Path ke file kamus kata dasar.
 
     Returns:
         set: Kumpulan kata dasar dari file kamus.
@@ -31,7 +30,6 @@ def load_dict(file_name):
     return dictionary
 
 
-# Memuat daftar stopwords dari file CSV
 def load_stopwords(file_name):
     """
     Membaca file stopwords dari CSV dan mengembalikan set stopwords.
@@ -58,7 +56,6 @@ def load_stopwords(file_name):
     return stopwords
 
 
-# Fungsi untuk membaca teks dari file txt
 def read_txt(file_name):
     """
     Membaca teks dari file txt dan mengembalikan string.
@@ -82,7 +79,6 @@ def read_txt(file_name):
         return ""
 
 
-# Fungsi untuk membaca teks dari file docx
 def read_docx(file_name):
     """
     Membaca teks dari file docx dan mengembalikan string.
@@ -110,7 +106,6 @@ def read_docx(file_name):
         return ""
 
 
-# Fungsi untuk membaca teks dari file PDF
 def read_pdf(file_name):
     """
     Membaca teks dari file PDF dan mengembalikannya sebagai string.
@@ -141,7 +136,6 @@ def read_pdf(file_name):
         return ""
 
 
-# Fungsi umum untuk membaca file berdasarkan ekstensi
 def read_file(file_name):
     """
     Membaca file berdasarkan ekstensinya (.txt, .docx, .pdf).
